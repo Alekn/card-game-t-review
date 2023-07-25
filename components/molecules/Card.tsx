@@ -4,8 +4,8 @@ import { ButtonIcon } from '../atoms/ButtonIcon'
 import { VariantProps, cva } from 'class-variance-authority'
 import { CardHeader } from './CardHeader'
 import { IGameDetail } from '@/app/page'
-import bonus from '../../public/images/bonus.png'
 import { CardDetails } from './CardDetails'
+import bonus from '../../public/images/bonus.png'
 
 const cardStyles = cva([
 	'group/bg flex flex-col justify-between relative',
@@ -18,6 +18,7 @@ export interface Props extends VariantProps<typeof cardStyles> {
 }
 
 export function Card({ details, ...props }: Props) {
+	const hasBonus = details.info.moodBonus
 	return (
 		<div className={cardStyles({})} {...props}>
 			<img
@@ -34,7 +35,7 @@ export function Card({ details, ...props }: Props) {
 				</div>
 				<div className="flex justify-between items-end">
 					<CardDetails name={details.name} info={details.info} />
-					<ButtonIcon src={bonus} alt="bonus" />
+					{hasBonus && <ButtonIcon src={bonus} alt="bonus" />}
 				</div>
 			</div>
 		</div>

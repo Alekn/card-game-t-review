@@ -11,7 +11,7 @@ const buttonStyles = cva(
 				accent: 'bg-amber-400 border-amber-400 active:text-amber-50',
 			},
 			variant: {
-				contained: 'hover:bg-opacity-80',
+				contained: 'hover:bg-opacity-80 active:bg-yellow-400',
 				outlined:
 					'bg-transparent border-2 disabled:bg-transparent disabled:border-neutral-400',
 			},
