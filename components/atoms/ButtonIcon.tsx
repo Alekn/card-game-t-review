@@ -5,7 +5,7 @@ import { ComponentProps } from 'react'
 const iconStyles = cva([
 	'flex-col justify-center items-center gap-1 inline-flex',
 	'bg-black bg-opacity-80 hover:bg-amber-400 hover:bg-opacity-20',
-	'p-0.5 h-6 w-6 rounded-md',
+	'p-1 h-6 w-6 rounded-md',
 ])
 
 type ButtonIconProps = ComponentProps<'button'> & ImageProps

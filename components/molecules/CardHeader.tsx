@@ -30,7 +30,7 @@ const getSupplierImage = (name: string): StaticImport => {
 			return evoplay
 		case 'pragmaticplay':
 			return pragmaticPlay
-		case 'playTech':
+		case 'playtech':
 			return playTech
 		case 'spinomenal':
 			return spinomenal

@@ -10,7 +10,7 @@ import bonus from '../../public/images/bonus.png'
 const cardStyles = cva(
 	[
 		'flex flex-col justify-between relative',
-		'w-64 h-52 border rounded-2xl overflow-hidden from-black',
+		'w-64 h-52 rounded-2xl overflow-hidden from-black',
 	],
 	{
 		variants: {
