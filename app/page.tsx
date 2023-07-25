@@ -40,14 +40,12 @@ export default async function Home() {
 
 	const isGameDataAvailable = typeof gamesData !== 'string'
 
-	console.log({ gamesData })
-
 	return (
 		<main className="flex min-h-screen flex-col items-center justify-between p-24">
 			{isGameDataAvailable &&
 				gamesData.map((game, i) => <Card key={i} details={game} />)}
 
-			<SupplierLablel src={evoplay} alt="evoplay" />
+			<SupplierLablel src={evoplay} alt="evoplay" size={'medium'} />
 			<SupplierLablel src={pragmaticPlay} alt="evoplay" />
 			<SupplierLablel src={playTech} alt="playTech" />
 			<SupplierLablel src={spinomenal} alt="spinomenal" />

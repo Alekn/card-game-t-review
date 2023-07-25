@@ -2,14 +2,18 @@ import { VariantProps, cva } from 'class-variance-authority'
 import Image, { ImageProps } from 'next/image'
 
 const supplierLabelStyles = cva(
-	'w-52 h-11 px-5 py-2.5 bg-black bg-opacity-50 rounded-xl flex-col justify-center items-center gap-1 inline-flex -z-10',
+	'bg-black flex-col justify-center items-center gap-1 inline-flex -z-10',
 	{
 		variants: {
 			size: {
 				small:
-					'px-0.5 h-5 w-5 rounded-md bg-opacity-80 items-stretch overflow-hidden',
-				medium: 'px-1 py-1 w-20 h-5 rounded-md bg-opacity-80',
+					'w-5 h-5 px-0.5 rounded-md bg-opacity-80 items-stretch overflow-hidden',
+				medium: 'w-20 h-5 px-1 py-1 rounded-md bg-opacity-80',
+				large: 'w-52 h-11 px-5 py-2.5 rounded-xl bg-opacity-50',
 			},
+		},
+		defaultVariants: {
+			size: 'large',
 		},
 	}
 )
