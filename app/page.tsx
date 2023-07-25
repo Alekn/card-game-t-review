@@ -9,21 +9,21 @@ import spinomenal from '../public/images/spinomenal.png'
 import bonus from '../public/images/bonus.png'
 import info from '../public/images/info.png'
 
-interface Info {
+export interface IInfo {
 	moodBonus: boolean
 	rtp: string
 	version: number
 }
 
-export interface GameDetail {
+export interface IGameDetail {
 	disabled: boolean
-	info: Info
+	info: IInfo
 	name: string
 	src: string
 	supplier: string
 }
 
-async function getCardGameData(): Promise<Array<GameDetail> | string> {
+async function getCardGameData(): Promise<Array<IGameDetail> | string> {
 	const res = await fetch(
 		'https://run.mocky.io/v3/a095fe75-f09e-45fa-967c-4b9c4c908fb3'
 	)
