@@ -10,15 +10,16 @@ import info from '../../public/images/info.png'
 
 interface Props {
 	supplier: string
+	isDisabled: boolean
 }
 
-export function CardHeader({ supplier: name }: Props) {
+export function CardHeader({ supplier: name, isDisabled }: Props) {
 	const supplierImage = getSupplierImage(name)
 
 	return (
 		<div className="flex justify-between items-center">
 			<SupplierLabel src={supplierImage} alt="evoplay" size={'medium'} />
-			<ButtonIcon src={info} alt="info" />
+			{!isDisabled && <ButtonIcon src={info} alt="info" />}
 		</div>
 	)
 }

@@ -2,7 +2,7 @@ import { VariantProps, cva } from 'class-variance-authority'
 import { ComponentProps } from 'react'
 
 const buttonStyles = cva(
-	'px-8 py-3.5 text-xl font-bold rounded-xl inline-flex justify-center items-center gap-2.5 uppercase disabled:bg-gray-200 disabled:text-neutral-400 disabled:pointer-events-none',
+	'font-bold inline-flex justify-center items-center gap-2.5 uppercase disabled:bg-gray-200 disabled:text-neutral-400 disabled:pointer-events-none',
 	{
 		variants: {
 			intent: {
@@ -17,11 +17,13 @@ const buttonStyles = cva(
 			},
 			size: {
 				small: 'text-xs py-2 px-4 text-white rounded-lg',
+				medium: 'text-xl py-3.5 px-8 rounded-xl',
 			},
 		},
 		defaultVariants: {
 			intent: 'primary',
 			variant: 'contained',
+			size: 'medium',
 		},
 		compoundVariants: [
 			{ class: 'active:border' },

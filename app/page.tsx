@@ -47,12 +47,10 @@ export default async function Home() {
 					gamesData.map((game, i) => <Card key={i} details={game} />)}
 			</div>
 
-			<SupplierLabel src={evoplay} alt="evoplay" size={'medium'} />
 			<SupplierLabel src={pragmaticPlay} alt="evoplay" />
 			<SupplierLabel src={playTech} alt="playTech" />
-			<SupplierLabel src={spinomenal} alt="spinomenal" />
-			<ButtonIcon src={bonus} alt="bonus" />
-			<ButtonIcon src={info} alt="info" />
+			<SupplierLabel src={evoplay} alt="evoplay" size={'medium'} />
+			<SupplierLabel src={spinomenal} alt="spinomenal" size="small" />
 		</main>
 	)
 }
