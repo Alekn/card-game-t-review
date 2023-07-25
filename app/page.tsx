@@ -42,8 +42,10 @@ export default async function Home() {
 
 	return (
 		<main className="flex min-h-screen flex-col items-center justify-between p-24">
-			{isGameDataAvailable &&
-				gamesData.map((game, i) => <Card key={i} details={game} />)}
+			<div className="grid grid-rows-2 grid-flow-col gap-4">
+				{isGameDataAvailable &&
+					gamesData.map((game, i) => <Card key={i} details={game} />)}
+			</div>
 
 			<SupplierLablel src={evoplay} alt="evoplay" size={'medium'} />
 			<SupplierLablel src={pragmaticPlay} alt="evoplay" />
