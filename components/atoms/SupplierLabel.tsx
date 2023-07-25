@@ -22,7 +22,7 @@ export interface Props
 	extends ImageProps,
 		VariantProps<typeof supplierLabelStyles> {}
 
-export function SupplierLablel({ size, ...props }: Props) {
+export function SupplierLabel({ size, ...props }: Props) {
 	const { src, alt, style, ...others } = props
 	const isSizeSmall = size === 'small'
 

@@ -1,28 +1,17 @@
 import { Button } from '../atoms/Button'
-import { SupplierLablel } from '../atoms/SupplierLabel'
 import { ButtonIcon } from '../atoms/ButtonIcon'
 import { CardText } from '../atoms/CardText'
 
-import evoplay from '../../public/images/evoplay.png'
-import info from '../../public/images/info.png'
-import bonus from '../../public/images/bonus.png'
 import { VariantProps, cva } from 'class-variance-authority'
+import { CardHeader } from './CardHeader'
 import { GameDetail } from '@/app/page'
+import bonus from '../../public/images/bonus.png'
 
-const cardStyles = cva(
-	[
-		'flex flex-col justify-between relative',
-		'w-64 h-52 border rounded-2xl overflow-hidden',
-		// 'bg-gradient-to-t from-black to-white bg-opacity-20',
-	],
-	{
-		variants: {
-			size: {
-				small: 'text-xs tracking-tight',
-			},
-		},
-	}
-)
+const cardStyles = cva([
+	'flex flex-col justify-between relative',
+	'w-64 h-52 border rounded-2xl overflow-hidden',
+	'hover:bg-gradient-to-t from-black bg-opacity-20',
+])
 
 export interface Props extends VariantProps<typeof cardStyles> {
 	details: GameDetail
@@ -37,10 +26,8 @@ export function Card({ details, ...props }: Props) {
 				alt={details.name}
 			/>
 			<div className="p-2 flex flex-col justify-between h-full relative">
-				<div className="flex justify-between items-center">
-					<SupplierLablel src={evoplay} alt="evoplay" size={'medium'} />
-					<ButtonIcon src={info} alt="info" />
-				</div>
+				{/* HERE GOES THE HEADER */}
+				<CardHeader supplier={details.supplier} />
 				<div className="flex items-center justify-between">
 					<Button size={'small'} intent={'accent'}>
 						jugar ahora

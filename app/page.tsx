@@ -1,4 +1,4 @@
-import { SupplierLablel } from '@/components/atoms/SupplierLabel'
+import { SupplierLabel } from '@/components/atoms/SupplierLabel'
 import { Card } from '@/components/molecules/Card'
 import { ButtonIcon } from '@/components/atoms/ButtonIcon'
 
@@ -47,10 +47,10 @@ export default async function Home() {
 					gamesData.map((game, i) => <Card key={i} details={game} />)}
 			</div>
 
-			<SupplierLablel src={evoplay} alt="evoplay" size={'medium'} />
-			<SupplierLablel src={pragmaticPlay} alt="evoplay" />
-			<SupplierLablel src={playTech} alt="playTech" />
-			<SupplierLablel src={spinomenal} alt="spinomenal" />
+			<SupplierLabel src={evoplay} alt="evoplay" size={'medium'} />
+			<SupplierLabel src={pragmaticPlay} alt="evoplay" />
+			<SupplierLabel src={playTech} alt="playTech" />
+			<SupplierLabel src={spinomenal} alt="spinomenal" />
 			<ButtonIcon src={bonus} alt="bonus" />
 			<ButtonIcon src={info} alt="info" />
 		</main>
